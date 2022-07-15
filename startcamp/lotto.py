@@ -35,22 +35,7 @@ def percent():
     for i in range(1000):
         random.sample(range(1, 46), 6)
     return matching()
+print(percent())
 
 # 6. 1등부터 2등을 포함한 (보너스 번호까지) 4등까지의 각 당첨 횟수 출력하기
-result = []
-percent()
-if percent() == 6:
-    result.append('1등')
-elif percent() == 5 and bonus in my_number():
-    result.append('2등')
-elif percent() == 5:
-    result.append('3등')
-elif percent() == 4:
-    result.append('4등')
-else:
-    result.append('꽝')
-print('1등',result.count('1등'))
-print('2등',result.count('2등'))
-print('3등',result.count('3등'))
-print('4등',result.count('4등'))
-print('꽝',result.count('꽝'))
+
