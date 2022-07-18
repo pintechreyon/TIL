@@ -5,3 +5,5 @@ def bot():
     while player > 0:
         print(greeting)
         player = player - 1
+    return player
+bot()
