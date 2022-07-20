@@ -1,6 +1,3 @@
-from audioop import avg
-
-
 score = {
 'python': 80,
 'django': 89,
