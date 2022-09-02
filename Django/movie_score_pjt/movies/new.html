@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>게시글 생성 페이지</h1>
+  <!-- 사용자가 값을 입력할 tag-->
+  <form action="{% url 'movies:create' %}" method="POST">
+    {% csrf_token %}
+    <label for="title">TITLE</label>
+    <input type="text" id="title" name="title">
+    <hr>
+    <label for="audience">AUDIENCE</label>
+    <input type="text" id="audience" name="audience">
+    <hr>
+    <label for="release_date">RELEASE_DATE</label>
+    <input type="date" id="release_date" name="release_date">
+    <hr>
+    <label for="genre">GENRE</label>
+    <select name="genre" id="genre">
+      <option value="">장르선택</option>
+      <option value="코미디">코미디</option>
+      <option value="판타지">판타지</option>
+      <option value="어드벤처">어드벤처</option>
+    </select>
+    <hr>
+    <label for="score">SCORE</label>
+    <input type="text" id="score" name="score">
+    <hr>
+    <label for="poster_url">POSTER_URL</label>
+    <input type="text" id="poster_url" name="poster_url">
+    <hr>
+    <label for="description">DESCRIPTION</label>
+    <input type="text" id="description" name="description">
+    <hr>
+    <input type="submit" value="생성">
+  </form>
+
+  {% comment %} {% url 'app_name:path_name' %} {% endcomment %}
+  <a href="{% url 'movies:index' %}">[BACK]</a>
+{% endblock content %}

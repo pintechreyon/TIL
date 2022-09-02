@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>DETAIL PAGE</h1>
+
+  <img src="{{movie.poster_url}}" alt="사진을 넣어주세요">
+  <p>글 제목 : {{ movie.title }}</p>
+  <p>Audience : {{ movie.audience }}</p>
+
+  <p>Release Dates : {{ movie.release_Dates }}</p>
+
+  <p>Genre : {{ movie.genre }}</p>
+
+  <p>Score : {{ movie.score }}</p>
+
+  <p>Description : {{ movie.description }}</p>
+
+  <a href="{% url 'movies:edit' movie.pk %}">[EDIT]</a>
+
+
+  <!-- HTML이 POST 요청을 보낼 수 있는 유일한 방법 -->
+  <form action="{% url 'movies:delete' movie.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="DELETE">
+  </form>
+  {% comment %} <a href="" method="POST"></a> method 속성 없음 {% endcomment %}
+  <a href="{% url 'movies:index' %}">[BACK]</a>
+{% endblock content %}
