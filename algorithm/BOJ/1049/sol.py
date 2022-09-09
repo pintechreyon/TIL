@@ -1,7 +1,7 @@
 import sys
 sys.stdin = open('input.txt')
 
-N, M = map(int, input().split())
+`N, M = map(int, input().split())
 arr = [list(map(int, input().split())) for _ in range(M)]
 a_6 = []
 a_1 = []
@@ -22,4 +22,4 @@ if var6 <= var1 * 6:
         result += N * var1
 else:
     result = var1 * N
-print(result)
+print(result)`
