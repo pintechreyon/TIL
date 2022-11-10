@@ -8,17 +8,23 @@
 </head>
 <body>
   <div id="app">
-    <p id="name">name : </p>
-    <input id="inputName" type="text">
+
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
-    const name = document.querySelector('#name')
-    const input = document.querySelector('#inputName')
-    input.addEventListener('input', function (e) {
-      name.innerText = 'name : ' + e.target.value
-    })
+    var vm = new Vue({
+      el: '#app',
+      data:{
+        message: 'hi'
+      },
+      methods:{
+
+      },
+      created: function() {
+
+      },
+    });
   </script>
-    
 </body>
 </html>

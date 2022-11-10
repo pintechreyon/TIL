@@ -8,20 +8,16 @@
 </head>
 <body>
   <div id="app">
-    <p id="name">name : {{ message }}</p>
-    <input id="inputName" type="text" v-model="message">
+    <!-- hello world -->
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
   <script>
-    // CODE HERE
-    const app = new Vue({
-      el: '#app',
-      data: {
-        message: '',
-      }
-    })
+    let div = document.querySelector('#app');
+    console.log(div);
+    let str = 'hello world'
+    div.innerText = str;
+    str = 'hello world!!!'
+    div. innerText = str;
   </script>
 </body>
 </html>
